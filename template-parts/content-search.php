@@ -4,32 +4,37 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package octosquatch
+ * @package Plainness
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+<div class="post">
+	<div class="postHeader">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1>', '</h1>' );
+		else :
+			the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+		?>
+		<div class="postMeta">
+			
 			<?php
-			octosquatch_posted_on();
-			octosquatch_posted_by();
+				plainness_posted_on();
 			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+		</div>
+	</div>
+	<div class="postBody">
+		<?php
+			
+			if ( is_singular() ) :
+				the_content();
+			else :
+				the_excerpt();
+			endif;
+		?>
 
-	<?php octosquatch_post_thumbnail(); ?>
+		
+	</div>
+</div>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php octosquatch_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->

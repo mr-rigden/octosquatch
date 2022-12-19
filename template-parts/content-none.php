@@ -4,48 +4,30 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package octosquatch
+ * @package Plainness
  */
 
 ?>
 
-<section class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'octosquatch' ); ?></h1>
-	</header><!-- .page-header -->
 
-	<div class="page-content">
-		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-
-			printf(
-				'<p>' . wp_kses(
-					/* translators: 1: link to WP admin new post page. */
-					__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'octosquatch' ),
-					array(
-						'a' => array(
-							'href' => array(),
-						),
-					)
-				) . '</p>',
-				esc_url( admin_url( 'post-new.php' ) )
-			);
-
-		elseif ( is_search() ) :
-			?>
-
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'octosquatch' ); ?></p>
+<div class="post">
+	<div class="postHeader">
+		<h1>
 			<?php
-			get_search_form();
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Nothing Found for: %s', 'plainness' ), '<br> &quot;<span>' . get_search_query() . '&quot;</span>' );
+						?>
+		</h1>
 
-		else :
-			?>
+		
+		
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'octosquatch' ); ?></p>
-			<?php
-			get_search_form();
+		<div class="postMeta">
+		</div>
+	</div>
+	<div class="postBody">
+	<?php get_search_form(); ?>
+		
+	</div>
+</div>
 
-		endif;
-		?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->

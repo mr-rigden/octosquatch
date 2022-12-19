@@ -4,13 +4,16 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package octosquatch
+ * @package Plainness
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+
+
+
+	<main id="main">
 
 		<?php
 		while ( have_posts() ) :
@@ -18,23 +21,40 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'octosquatch' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'octosquatch' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
+
+
 
 		endwhile; // End of the loop.
 		?>
 
+	<hr>
+	<p style="text-align: center;">
+		Like what you see? Subscribe to my newsletter to get updates on new posts, episodes, and other cool stuff.
+	</p>
+	<form
+		action="https://buttondown.email/api/emails/embed-subscribe/mr_rigden"
+		method="post"
+		target="popupwindow"
+		class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"
+	>
+
+	<label for="email" class="wp-block-search__label"></label>
+  	<div class="wp-block-search__inside-wrapper ">
+	<input
+		type="email"
+			name="email"
+			placeholder="you@gmail.com"
+			id="wp-block-search__input-1" class="wp-block-search__input wp-block-search__input"
+		/>
+		<input type="hidden" value="1" name="embed" />
+		<button type="submit" class="wp-block-search__button wp-element-button">Subscribe</button>
+	</div>
+
+	</form>	
+
 	</main><!-- #main -->
+	
 
 <?php
-get_sidebar();
 get_footer();
