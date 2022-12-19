@@ -28,30 +28,10 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	<hr>
-	<p style="text-align: center;">
-		Like what you see? Subscribe to my newsletter to get updates on new posts, episodes, and other cool stuff.
+	<p style="padding-top: 1rem">
+		Subscribe to <a href="http://dummy.local/ducimus-eum-cupiditate-dolore/adsadsadsadsdasdasdasdsad">Jason Rigden's Newsletter</a> to get updates on new posts, episodes, and other cool stuff.
 	</p>
-	<form
-		action="https://buttondown.email/api/emails/embed-subscribe/mr_rigden"
-		method="post"
-		target="popupwindow"
-		class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"
-	>
 
-	<label for="email" class="wp-block-search__label"></label>
-  	<div class="wp-block-search__inside-wrapper ">
-	<input
-		type="email"
-			name="email"
-			placeholder="you@gmail.com"
-			id="wp-block-search__input-1" class="wp-block-search__input wp-block-search__input"
-		/>
-		<input type="hidden" value="1" name="embed" />
-		<button type="submit" class="wp-block-search__button wp-element-button">Subscribe</button>
-	</div>
-
-	</form>	
 
 	</main><!-- #main -->
 	
