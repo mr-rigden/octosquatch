@@ -28,9 +28,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-	<p style="padding-top: 1rem">
-		Subscribe to <a href="http://dummy.local/ducimus-eum-cupiditate-dolore/adsadsadsadsdasdasdasdsad">Jason Rigden's Newsletter</a> to get updates on new posts, episodes, and other cool stuff.
-	</p>
+
 
 
 	</main><!-- #main -->

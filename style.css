@@ -365,25 +365,33 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 
 
-  html {
-	font-family: 'Jost', sans-serif;
-	font-size: calc(16px + 0.390625vw);
-	color: #111111;
-	background-color: #FFFFFF;
-	font-weight: 400;
 
 
 
-
-}
 body {
 	padding: 1rem;
 	max-width: 650px;
 	margin: auto;
-	min-height: calc(100vh - 2rem);
+	min-height: calc(100vh - 1rem);
+  min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
+}
+
+h1 {font-size: 3.052rem;}
+h2 {font-size: 2.441rem;}
+h3 {font-size: 1.953rem;}
+h4 {font-size: 1.563rem;}
+h5 {font-size: 1.25rem;}
+.small-text, .postMeta {
+  font-size: 0.8rem;
+}
+.smaller-text {
+  font-size: 0.64rem;
+}
+.smallest-text {
+  font-size: 0.512rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -412,7 +420,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .postMeta {
-	font-size: calc(12px + 0.390625vw);
 
 }
 
@@ -439,7 +446,6 @@ header {
 	display: grid;
 	grid-template-columns: auto auto;
 	padding-bottom: 1rem;
-	font-size: calc(14px + 0.390625vw);
 	font-weight: 400;
 
 
@@ -464,7 +470,6 @@ footer {
 nav {
 text-align: center;
 user-select: none;
-font-size: calc(22px + 0.390625vw);
 
 }
 
@@ -519,7 +524,6 @@ margin: 0;
 
 padding: 1rem;
 margin-bottom: 1rem;
-font-size: calc(12px + 0.390625vw);
 }
 
 
@@ -572,11 +576,8 @@ input {
   text-align: center; 
 }
 
-footer {
-  font-size: 1rem;
-}
-footer p {
-  text-align: center;
 
-}
 
+::selection {
+  background: #FFDC00; /* WebKit/Blink Browsers */
+}

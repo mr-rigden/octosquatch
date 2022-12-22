@@ -12,6 +12,8 @@
 ?>
 
 	<footer>
+		Subscribe to <a href="http://dummy.local/ducimus-eum-cupiditate-dolore/adsadsadsadsdasdasdasdsad">Jason Rigden's Newsletter</a> to get updates on new posts, episodes, and other cool stuff.
+
 
 
 
